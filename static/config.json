@@ -1,6 +1,15 @@
 {
     "Apis":[
         {
+            "Name":"接口的文字描述"
+            ,"Method":"GET"
+            ,"Url":"api/test"
+            ,"Parameters":{
+                "version":"v2"
+            }
+            ,"Result":{}
+        },
+        {
             "Name":"获取AccessKey"
             ,"Method":"GET"
             ,"Url":"api/user/accesskey/get"
