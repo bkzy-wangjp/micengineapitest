@@ -68,7 +68,7 @@ live-server
 
 方法2：
 在Visual Studio Code中启动在线服务
-![在Visual Studio Code中启动在线服务](tree/main/static/img/golive.png)
+![在Visual Studio Code中启动在线服务](https://github.com/bkzy-wangjp/micengineapitest/tree/main/static/img/golive.png)
 
 运行后的API接口测试页面如下图：
-![运行后的API接口测试页面](tree/main/static/img/runtemp.png)
+![运行后的API接口测试页面](https://github.com/bkzy-wangjp/micengineapitest/tree/main/static/img/runtemp.png)
