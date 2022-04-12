@@ -1,0 +1,38 @@
+.readme{
+    color: rgb(250, 6, 6);
+    background-color:green;
+}
+.tb-title{
+    text-align: center;
+}
+table{
+    border: 1px solid rgb(205, 205, 212);
+    table-layout: fixed;
+    border-collapse: collapse;
+    width: 100%;
+}
+th{
+    border: 1px solid rgb(205, 205, 212);
+}
+td{
+    border: 1px solid rgb(205, 205, 212);
+    word-break: break-all; 
+    word-wrap:break-word;
+}
+.tb-number,.tb-method{
+    width: 50px;
+    text-align: center;
+}
+.tb-name,.tb-url {
+    width: 10%;
+}
+.tb-params {
+    width: 15%;
+}
+.div-loginmsg {
+    word-break: break-all; 
+    word-wrap:break-word;
+}
+.jsonkey{
+    color: #05df05;
+}

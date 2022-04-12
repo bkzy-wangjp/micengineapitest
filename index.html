@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>API Test</title>
+        <link rel="Bookmark" href="static/img/micloud.ico" /> 
+        <link rel="shortcut icon" href="static/img/micloud.ico" /> 
+        <link rel="stylesheet" href="static/index.css"/>
+    </head>
+    <body>
+        <header>
+            <div id="app">
+                <span class="readme">修改/static/config.json文件可以修改初始访问地址、用户名、密码和待测试列表！</span>
+                <div>
+                    <label>计算服务访问地址：<input type="text" v-model="BaseUrl" ></label>;
+                    <label>测试用户名: <input type="text" v-model="UserName" ></label>;
+                    <label>测试密码: <input type="text" v-model="Password" ></label>
+                </div>
+                <div v-show="LoginOk" class="div-loginmsg">登录成功: {{Token}}</div>
+                <div v-show="LoginOk==false" class="div-loginmsg">登录错误: {{ErrMsg}}</div>
+                <hr>
+                <h1 class="tb-title">API测试列表(共{{Apis.length}}组)</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="tb-number">序号</th>
+                            <th class="tb-name">名称</th>
+                            <th class="tb-method">方法</th>
+                            <th class="tb-url">URL</th>
+                            <th class="tb-params">参数</th>
+                            <th class="tb-result">请求结果</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr v-for="(api,index) in Apis">
+                            <td class="tb-number">{{index+1}}</td>
+                            <td>{{api.Name}}</td>
+                            <td class="tb-method">{{api.Method}}</td>
+                            <td>{{api.Url}}</td>
+                            <td v-html="formatParam(api.Parameters)"></td>
+                            <td v-html="formatParam(api.Result)"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </header>
+    </body>
+    <script type="text/javascript" src="static/vue/vue.global.js"></script>
+    <script type="text/javascript" src="static/vue/axios.min.js"></script>
+    <script type="text/javascript" src="static/md5.js"></script>
+    <script type="text/javascript" src="static/formatjson.js"></script>
+    <script type="text/javascript" src="static/index.js"></script>
+</html>
