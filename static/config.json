@@ -1,6 +1,54 @@
 {
     "Apis":[
         {
+            "Name":"获取用户被授权的报表节点"
+            ,"Method":"GET"
+            ,"Url":"api/getreportlistsbyuserid"
+            ,"Parameters":{
+                "userid":0,
+                "version":"v2"
+            }
+            ,"Result":{}
+        },
+        {
+            "Name":"SQL脚本测试v1"
+            ,"Method":"GET"
+            ,"Url":"api/script/sql"
+            ,"Parameters":{
+                "micsql":"select(*).from(sys_unit).where(id<10).limit(1).as(json)"
+            }
+            ,"Result":{}
+        },
+        {
+            "Name":"SQL脚本测试v2"
+            ,"Method":"GET"
+            ,"Url":"api/script/sql"
+            ,"Parameters":{
+                "micsql":"select(*).from(sys_unit).where(id<10).limit(1).as(json)",
+                "version":"v2"
+            }
+            ,"Result":{}
+        },
+        {
+            "Name":"脚本测试v1"
+            ,"Method":"GET"
+            ,"Url":"api/script"
+            ,"Parameters":{
+                "script":"date(now,T)"
+            }
+            ,"Result":{}
+        },
+        {
+            "Name":"脚本测试v2"
+            ,"Method":"GET"
+            ,"Url":"api/script"
+            ,"Parameters":{
+                "script":"date(now,T)",
+                "version":"v2"
+            }
+            ,"Result":{}
+        },
+        {
             "Name":"测试接口"
             ,"Method":"GET"
             ,"Url":"api/test"
